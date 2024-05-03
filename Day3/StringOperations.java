@@ -17,6 +17,7 @@ public class StringOperations {
 		System.out.println(countWords(str3));
 		System.out.println(isAllVowelsPresent(str));
 		System.out.println(countVowels(str));
+
 	}
 
 	public static boolean isPalindrome(String str) {
@@ -67,14 +68,18 @@ public class StringOperations {
 	}
 
 	public static boolean isPanagram(String str) {
-		boolean flag = true;
-		String str1 = str.toLowerCase();
-		for (char i = 'a'; i <= 'z'; i++) {
-			if (!str1.contains(String.valueOf(i))) {
-				flag = false;
-			}
+		int[] freq = new int[26];
+		str = str.toUpperCase();
+		for (int i = 0; i < str.length(); i++) {
+			freq[str.charAt(i) - 65]++;
 		}
-		return flag;
+		for (int element : freq) {
+			if (element == 0) {
+				return false;
+			}
+
+		}
+		return true;
 	}
 
 	public static int countWords(String str) {
@@ -88,17 +93,22 @@ public class StringOperations {
 
 	public static boolean isAllVowelsPresent(String str) {
 		String str1 = str.toLowerCase();
-		if (str1.contains("a") && str1.contains("e") && str1.contains("i") && str1.contains("o") && str1.contains("u"))
-			return true;
-		else
-			return false;
+		boolean flag = true;
+		for (int i = 0; i < str1.length(); i++) {
+			if (str1.charAt(i) != 'a' && str1.charAt(i) != 'e' && str1.charAt(i) != 'i' && str1.charAt(i) != 'o'
+					&& str1.charAt(i) != 'u')
+				flag = false;
+		}
+		return flag;
+
 	}
 
 	public static int countVowels(String str) {
-		String str1=str.toLowerCase();
+		String str1 = str.toLowerCase();
 		int count = 0;
-		for(int i=0;i<str.length();i++) {
-			if(str1.charAt(i)=='a' || str1.charAt(i)=='e' || str1.charAt(i)=='i' || str.charAt(i)=='o' ||str.charAt(i)=='u')
+		for (int i = 0; i < str.length(); i++) {
+			if (str1.charAt(i) == 'a' || str1.charAt(i) == 'e' || str1.charAt(i) == 'i' || str.charAt(i) == 'o'
+					|| str.charAt(i) == 'u')
 				count++;
 		}
 		return count;
