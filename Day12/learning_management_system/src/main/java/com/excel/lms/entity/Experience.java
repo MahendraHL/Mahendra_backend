@@ -1,0 +1,44 @@
+package com.excel.lms.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Entity
+@Builder
+@Table(name="experience")
+public class Experience {
+	
+	@Column(name = "experience_id")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
+	@Column(name = "years_of_experience")
+	private String yearsOfExperience;
+
+	@Column(name = "date_of_joining")
+	private String dateOfJoining;
+	
+	@Column(name = "date_of_relieving")
+	private String dateOfRelieving;
+
+	@Column(name = "designation")
+	private String designation;
+	
+	@Column(name = "location")
+	private String location;
+
+}
