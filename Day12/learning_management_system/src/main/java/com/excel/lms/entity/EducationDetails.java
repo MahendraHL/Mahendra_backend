@@ -50,14 +50,8 @@ public class EducationDetails {
 	@Column(name = "state")
 	private String state;
 
-	@Column(name = "email")
-	private String email;
-
 	@Column(name = "year_of_passing")
 	private String yearOfPassing;
-
-	@Column(name = "designation")
-	private String designation;
 
 	@Column(name = "specialization")
 	private String specialization;

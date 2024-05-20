@@ -1,5 +1,7 @@
 package com.excel.lms.dto;
 
+import com.excel.lms.enums.MaritalStatus;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,6 +30,6 @@ public class EmployeeSecondaryInfoDto {
 
 	private String passportNumber;
 
-	private String maritalStatus;
+	private MaritalStatus maritalStatus;
 
 }

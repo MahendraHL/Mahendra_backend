@@ -1,5 +1,7 @@
 package com.excel.lms.dto;
 
+import com.excel.lms.enums.Designation;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,6 +16,8 @@ import lombok.Setter;
 
 public class ExperienceDto {
 	private Integer id;
+	
+	private String companyName;
 
 	private String yearsOfExperience;
 
@@ -21,7 +25,7 @@ public class ExperienceDto {
 
 	private String dateOfRelieving;
 
-	private String designation;
+	private Designation designation;
 
 	private String location;
 

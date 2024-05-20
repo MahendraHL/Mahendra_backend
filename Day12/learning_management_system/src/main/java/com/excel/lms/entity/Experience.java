@@ -1,5 +1,7 @@
 package com.excel.lms.entity;
 
+import com.excel.lms.enums.Designation;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,6 +31,9 @@ public class Experience {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column(name = "company_name")
+	private String companyName;
 
 	@Column(name = "years_of_experience")
 	private String yearsOfExperience;
@@ -40,7 +45,7 @@ public class Experience {
 	private String dateOfRelieving;
 
 	@Column(name = "designation")
-	private String designation;
+	private Designation designation;
 	
 	@Column(name = "location")
 	private String location;

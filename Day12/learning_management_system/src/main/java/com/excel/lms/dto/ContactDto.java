@@ -1,5 +1,7 @@
 package com.excel.lms.dto;
 
+import com.excel.lms.enums.ContactType;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,7 +18,7 @@ public class ContactDto {
 	
 	private Integer id;
 
-	private String contactType;
+	private ContactType contactType;
 
 	private String contactNumber;
 

@@ -80,7 +80,7 @@ public class EmployeePrimaryInfo {
 	private List<Contact> contact;
 	
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL,mappedBy = "employeePrimaryInfo")
-	private List<EducationDetails>educationDetails;
+	private List<EducationDetails> educationDetails;
 	
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL,mappedBy = "employeePrimaryInfo")
 	private List<Experience> experiences;
@@ -88,7 +88,7 @@ public class EmployeePrimaryInfo {
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL,mappedBy = "employeePrimaryInfo")
 	private BankDetails bankDetails;
 	
-	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "employeePrimaryInfos")
+	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "employeePrimaryInfo")
 	private List<TechnicalSkills> technicalSkills;
 	
 	@OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "employeePrimaryInfo")

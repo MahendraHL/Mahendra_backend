@@ -44,6 +44,6 @@ public class TechnicalSkills {
 	
 	@JoinTable(name="map_skill_employee",joinColumns = @JoinColumn(name="skills_id"),inverseJoinColumns = @JoinColumn(name="employee_id"))
 	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	private List<EmployeePrimaryInfo> employeePrimaryInfos;
+	private List<EmployeePrimaryInfo> employeePrimaryInfo;
 
 }

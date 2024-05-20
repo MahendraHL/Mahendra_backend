@@ -1,5 +1,7 @@
 package com.excel.lms.dto;
 
+import com.excel.lms.enums.EducationType;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,7 +18,7 @@ public class EducationDetailsDto {
 	
 	private Integer id;
 
-	private String educationType;
+	private EducationType educationType;
 
 	private String percentage;
 
@@ -26,11 +28,7 @@ public class EducationDetailsDto {
 
 	private String state;
 
-	private String email;
-
 	private String yearOfPassing;
-
-	private String designation;
 
 	private String specialization;
 
